@@ -1,18 +1,18 @@
 # see: https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions
-name: 'Render Juejin Posts in Readme'
-description: 'Render Juejin Posts in Readme'
+name: 'Build OpenWrt'
+description: 'Build OpenWrt in github Actions'
 
 # 定义当前步骤参数
-inputs:
-  user_id:
-    description: 掘金用户 ID
-    required: true
-    default: ''
+# inputs:
+#   user_id:
+#     description: 掘金用户 ID
+#     required: true
+#     default: ''
 
 # 向下一个步骤输出参数
 # outputs:
 #   time: # output will be available to future steps
 #     description: 'The message to output'
 runs:
-  using: 'node16'
+  using: 'node18'
   main: 'lib/index.js'
